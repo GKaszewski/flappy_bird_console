@@ -1,0 +1,16 @@
+[package]
+name = "flappy_bird_console"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+byteorder = "1.5.0"
+console_engine = "2.6.1"
+rand = "0.8.5"
+
+[profile.release]
+lto = 'thin'
+codegen-units = 1
+opt-level = 'z'
